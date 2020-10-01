@@ -53,11 +53,11 @@ public class View : MonoBehaviour
 
 	public bool Visible_ { get; private set; }
 
-	[SerializeField] protected bool controlsCursor = false;
+	[SerializeField] protected bool controlsCursorVisibility = false;
 
 	public virtual void Show()
 	{
-		if (this.controlsCursor)
+		if (this.controlsCursorVisibility)
 			Cursor.visible = true;
 
 		this.Visible_ = true;
@@ -68,7 +68,7 @@ public class View : MonoBehaviour
 
 	public virtual void Hide()
 	{
-		if (this.controlsCursor)
+		if (this.controlsCursorVisibility)
 			Cursor.visible = false;
 
 		this.Visible_ = false;
